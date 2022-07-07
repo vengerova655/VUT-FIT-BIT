@@ -1,0 +1,302 @@
+/**
+ * @author: Veronika Vengerova(xvenge01)
+ */
+
+#modalbkgrndscreen{
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+    background-color: var(--color-darkgreen);
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+}
+
+#modalbkgrndtoday{
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: none;
+    background-color: var(--color-darkgreen);
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+}
+
+.checked{
+    background-color: cadetblue;
+}
+
+.birthday_modal{
+    display: flex;
+    flex-direction: column;
+    position:fixed;
+    width: 15rem;
+    margin-left: 0.5rem;
+    height: 10rem;
+    background-color: gray;
+    color: whitesmoke;
+    opacity: 0.9;
+}
+
+.birthday_modal div{
+    font-size: 1.2rem;
+    display: flex;
+    height: 2rem;
+    padding: 0.1rem;
+    flex-direction: column;
+}
+
+.modal_R{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 43%;
+    top: 1%;
+    z-index: 2; /* Sit on top */
+    /* padding-top: 0.5rem; Location of the box */
+    align-content: center;
+    justify-content: center;
+    height: 50rem;
+    width: 25rem; /* Full width */
+    /* background-color: rgb(0,0,0); Fallback color */
+    
+    color: black;
+    background-color: var(--color-lightergreen);
+  
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 43%;
+    top: 1%;
+    z-index: 2; /* Sit on top */
+    /* padding-top: 0.5rem; Location of the box */
+    align-content: center;
+    justify-content: center;
+    height: 50rem;
+    width: 25rem; /* Full width */
+    border-radius: 5%;
+    /* background-color: rgb(0,0,0); Fallback color */
+    
+    color: black;
+    background-color: var(--color-lightergreen);
+  }
+
+
+.modal_category{
+
+    border-radius: 5%;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 43%;
+    top: 1%;
+    z-index: 2; /* Sit on top */
+    /* padding-top: 0.5rem; Location of the box */
+    align-content: center;
+    justify-content: center;
+    height: 25rem;
+    width: 25rem; /* Full width */
+    /* background-color: rgb(0,0,0); Fallback color */
+
+    color: black;
+    background-color: var(--color-lightergreen);
+}
+
+.modal-inside_category{
+
+    border-radius: 5%;
+    height: 10rem;
+    font-size: 1.5rem;
+    margin: 1.2rem;
+}
+
+.modal_hiddenR {
+    border-radius: 5%;
+    visibility:hidden; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 43%;
+    top: 1%;
+    z-index: 2; /* Sit on top */
+    /* padding-top: 0.5rem; Location of the box */
+    align-content: center;
+    justify-content: center;
+    height: 50rem;
+    /* background-color: rgb(0,0,0); Fallback color */
+    
+    color: black;
+    background-color: var(--color-lightergreen);
+  }
+/* .modal-inside {
+    display: block;
+    flex-direction: column;
+    height: 30rem;
+} */
+
+.modal-header {
+    display: block;
+    /* flex-direction: row; */
+    height: 5rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0.8rem;
+}
+.modal-footer {
+    display: block;
+    /* flex-direction: row; */
+    height: 5rem;
+    display: flex;
+    justify-content: flex-end;
+    /* padding: 2px 16px; */
+
+}
+
+  
+.close {
+    float: right;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: bold;
+  }
+  
+.close:hover,
+.close:focus {
+    color: #aaa;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.namerem{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.namerem p{
+    display: inline;
+    
+}
+.modal-inside{
+    height: 20rem;
+    font-size: 1.5rem;
+    margin: 1.2rem;
+}
+
+
+#s_remModal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 43%;
+    top: 1%;
+    z-index: 2; /* Sit on top */
+    /* padding-top: 0.5rem; Location of the box */
+    align-content: center;
+    justify-content: center;
+    /* background-color: rgb(0,0,0); Fallback color */
+    
+    color: black;
+    background-color: var(--color-darkgreen);
+    padding: 1rem;
+    /* background-color: rgb(0,0,0); Fallback color */
+    border:0.2rem solid black ;
+
+    border-radius: 4%;
+    color: whitesmoke;
+}
+
+
+#s_today{
+    overflow: hidden;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 43%;
+    top: 1%;
+    z-index: 3; /* Sit on top */
+    /* padding-top: 0.5rem; Location of the box */
+    align-content: center;
+    justify-content: center;
+    /* background-color: rgb(0,0,0); Fallback color */
+    
+    color: black;
+    background-color: var(--color-darkgreen);
+    padding: 1rem;
+    /* background-color: rgb(0,0,0); Fallback color */
+    border:0.2rem solid black ;
+    border-radius: 4%;
+    color: whitesmoke;
+}
+#B_Name{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.date{
+    font-size: 2rem;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
+#saveButton{
+
+    width: 5rem;
+    font-size: 1.5rem;
+}
+
+#saveButton:hover{
+    cursor: pointer;
+    background-color: white;
+    border: 0.2rem solid var(--color-darkgreen);
+    width: 5rem;
+    font-size: 1.5rem;
+}
+
+#saved{
+    z-index: 5;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: lightgray;
+    font-size: 2rem;
+    color: black;
+    display:block;
+}
+.error{
+    padding: 0;
+    margin: 0;
+    font-size: 1.3rem;
+    /* font-weight: bold; */
+    color: rgb(177, 28, 28);
+    background-color: rgba(211, 211, 211, 0.575);
+}
+
+
+
+#showEmailError{
+    padding: 0;
+    margin: 0;
+    font-size: 1.3rem;
+    /* font-weight: bold; */
+    color: rgb(177, 28, 28);
+    background-color: rgba(211, 211, 211, 0.575);
+}
+
+
+
+
+
+
+#DeleteButton{
+    width: 50%;
+    font-size: 1.5rem;
+}

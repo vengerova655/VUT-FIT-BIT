@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Jozo Mrkva",
+        "category": "Friends",
+        "year":"2001",
+        "month": "11",
+        "day": "17"
+    },
+
+    {
+        "name": "Jozef Mrkva",
+        "category": "Friends",
+        "year":"2001",
+        "month": "12",
+        "day": "4"
+    },
+
+    {
+        "name": "Fero Herceg",
+        "category": "Family",
+        "year":"2001",
+        "month": "12",
+        "day": ""
+    },
+
+    {
+        "name": "Dalia Satinska",
+        "category": "Family",
+        "year":"2001",
+        "month": "12",
+        "day": "5"
+    }
+
+
+]

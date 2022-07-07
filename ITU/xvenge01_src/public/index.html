@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Veronika-Vengerova-xvenge01">
+    <link rel="stylesheet" href="css/app-style.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <title>Birthday Calendar</title>
+</head>
+<body>
+    <div id = "whole-app">
+        <span id ="saved"></span>
+        <div id="sidebar">
+            <div id="importantpeople">
+                <div class="sidebar "> Upcoming birthdays of important people</div>
+                <div id="important_birthdays"></div>
+            </div>
+            <div id="birthdays">
+                <div id="ClickedDate" class="sidebar "></div>
+        
+                <div id="show-birthdays"></div> 
+
+                <div id="AddBirthday" class="bordered"> 
+                <button  class="addBirthday">
+                    <svg width="20" height="20">
+                        <line x1="0" y1="10" x2="20" y2="10" style="stroke: black;stroke-width:2" />
+                        <line x1="10" y1="0" x2="10" y2="20" style="stroke:black;stroke-width:2" />
+                    </svg> 
+                </button>
+                <p>Add Birthday</p>
+                </div>
+            </div>
+
+            <div id="category">
+                <div class="sidebar ">Categories</div>
+                <div id="show-category">
+                    <label  class="familyCheckbox"><input type="checkbox" id="isFamilyChecked" value="Family" checked/> Family </label>
+                    <label  class="friendsCheckbox"><input type="checkbox" id="isFriendsChecked" value="Friends" checked/> Friends </label>
+                </div> 
+
+                <div id="AddCategory" class="bordered margin_top"> 
+                    <button  class="addBirthday " >
+                        <svg width="20" height="20">
+                            <line x1="0" y1="10" x2="20" y2="10" style="stroke: black;stroke-width:2" />
+                            <line x1="10" y1="0" x2="10" y2="20" style="stroke:black;stroke-width:2" />
+                        </svg> 
+                    </button>
+                    <p>Add Category</p>
+                    </div>
+                <!-- <button id="AddCategory" class="AddButton">Add</button> -->
+            </div>
+        </div>
+        <!-- Calendar -->
+        <div id="container">
+            <div id="header">
+                <button id="prev"> &#8592 </button>
+                <div id="MonthDisplay"></div>
+                <div id="YearDisplay"></div>
+                <button id="next"> &#8594 </button>
+            </div>
+
+            <div id="weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div id="calendar">
+                
+            </div>
+
+
+        </div>
+
+<!-- Modal-with form to add new birthdays -->
+    <div id="modal-newBirthday" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add Birthday</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-inside">
+                <form id="postForm">
+                    <p class="underlined">Name:</p>
+                    <p class="error"></p>
+                    <input type="text" id="B_Name" placeholder="Name" />
+                    <p class="underlined margin_top">Date:</p> 
+                    <p class="smaller">(MM/DD/YYYY)</p>
+                    <p class="error"></p>
+                    <div class="date">
+                        <input type="date" id="B_Date" />
+                    </div>
+                    <p class="underlined margin_top">Add Reminder:</p> 
+                    <div class="date">
+                        <input type="date" id="B_ReminderDate" />
+                        
+                    </div>
+                    <button type="button" onclick="reminderShow()">Send also email to remind</button>    
+                    
+                        <div id="modal-Reminder" class="modal_hiddenR">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="underlined" id="nametoreminder"></h2>
+                                    
+                                    <p id="r_date"></p>
+                                    <span class="close">&times;</span>
+                                </div>
+                                
+                                <div class="modal-inside">
+                        
+                                        <p class="margin_top underlined">Send reminder on:</p>
+                                        <p id="R_errDate"></p>
+                                        <div class="date">
+                                            <input class="margin_top" type="date" id="ch_ReminderDate" />
+                                        </div>
+                                        <p class="margin_top underlined">Send reminder:</p>
+                                        <p id="R_errEmail"></p>
+                                        <input class="margin_top" type="text" id="R_email" placeholder="email@domain.com"/>
+                                        <p class="margin_top underlined">Birthday wish concept:</p>
+                                        <textarea class="margin_top" id="B_WishConcept" name="Text1" cols="23" rows="10"></textarea> 
+                                        <button class="margin_top" id="RemindButton" type="button">Remind</button>
+                                    
+                                </div>
+                                
+                                
+                                
+                            </div>
+                        </div>
+                <p class="underlined margin_top">Category:</p>
+                <div id="checkboxRadio" class="show-together">
+                    <label class="familyCheckbox"><input type="radio" id="R_isFamily" name="category" value="Family"> Family </label>
+                    <label class="friendsCheckbox"><input type="radio" id="R_isFriends" name="category" value="Friends"> Friends </label>
+                </div> 
+                <div class="margin_top">
+                    <label><input type="radio" id="B_isImportant" value="Important" name="importance"/> Important </label>
+                    <p></p>
+                    <label><input type="radio" id="B_isnotImportant" value="Not_Important" name="importance"/> Not_Important </label>
+                </div>
+                <input class="margin_top" type="submit" id="saveButton" value="Save"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<!-- background modal so cannot interact with background -->
+    <div id="modalbkgrndscreen"></div>
+    <div id="s_remModal">
+        <form id="remForm" onsubmit="sendReminder();return false">
+        <h2 id="s_reminder" class="underlined">Reminder:
+            <span class="close">&times;</span>
+        </h2>
+            <p>Name: <span id="s_Name"></span></p>
+            <p>Birthday on: <span id="s_remDate"></span></p>
+            <p>Concept of birthday wish:</p>
+            <textarea id="s_remText" class="margin_top" name="Text1" cols="23" rows="10" ></textarea> 
+            <p class="margin_top"><button type="submit" id="sendRButton">Save Wish</button>
+              </p>
+        </form>
+    </div>
+
+<!-- background modal -->
+    <div id="modalbkgrndtoday"></div>
+<!-- today reminder -->
+    <div id="s_today">
+        <form id="todayForm" onsubmit="sendTodayWish();return false">
+        <h2 id="s_reminder" class="underlined">Today:
+            <span class="close">&times;</span>
+        </h2>
+            <p>Name: <span id="s_tName"></span></p>
+            <p>Birthday on: <span id="s_tDate"></span></p>
+            <p>Concept of birthday wish:</p>
+            <textarea id="s_tText" class="margin_top" name="Text1" cols="23" rows="10" ></textarea> 
+            <p class="margin_top">Send to:</p>
+            <p id="showEmailError"></p>
+            <input class="margin_top" type="text" id="T_email" placeholder="email@domain.com"/>
+
+            
+            <p class="margin_top"><button type="submit" id="sendtButton">Send Wish</button>
+              </p>
+        </form>
+    </div>
+
+
+
+<!-- modal with form to add category -->
+    <div id="modal-category" class="modal_category">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add Category</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-inside">
+                <form id="catForm" onsubmit="saveCategory();return false">
+                    <p class="underlined">Name of category:</p>
+                    <p class="error"></p>
+                    <input type="text" id="F_Category" placeholder="Name" />
+                   
+                    <input class="margin_top" type="submit" id="saveCategoryButton" value="Add"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/lib/jquery-3.6.0.min.js"></script>
+    <script src="/js/data.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

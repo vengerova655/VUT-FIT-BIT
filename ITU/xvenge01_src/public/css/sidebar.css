@@ -1,0 +1,150 @@
+/**
+ * @author: Veronika Vengerova(xvenge01)
+ */
+ 
+.sidebar{
+    padding: 0.2rem;
+    font-size: 1.2rem;
+    height: 4rem;
+    font-weight: bold;
+    /* color:black; */
+    text-shadow:  var(--color-darkgreen);
+    color: #150536;
+   
+    border-radius: 0rem;
+    background-color:#a18cd0;
+    border-bottom: 0.1rem solid var(--color-darkgreen);
+}
+.active{
+    display: none;
+}
+
+#sidebar{
+    width: 15rem;
+    height: 52rem;
+    margin-right: 2rem;
+}
+
+/*
+Birthday sidebar
+*/
+#importantpeople{
+    width: 100%;
+    overflow: hidden;
+    border: 0.2rem double var(--color-darkgreen);
+    border-radius: 5%;
+}
+
+#important_birthdays{
+    height: 10rem;
+    overflow: auto;
+  
+}
+
+#important_birthdays div{
+    margin: 0.2rem;
+    border: 0.2rem solid var(--color-darkgreen);
+    
+    background-color: var(--color-lightgreen);
+}
+
+#birthdays{
+    margin-top: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* width: 15rem; */
+    width: 100%;
+    border: 0.2rem double var(--color-darkgreen);
+    border-radius: 5%;
+    height: 17rem;
+}
+#show-birthdays{
+    height: 12rem;
+    overflow:auto;
+}
+/* #show-birthdays div{
+    margin: 0.4rem;
+    width: 10rem;
+    height: 1.5rem;
+    text-align: center;
+    background-color: var(--color-lightblue);
+
+} */
+
+.addBirthday{
+    display: block;
+    justify-content: end;
+    margin: 0.8rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+    background-color: var(--color-lightergreen);
+    border: 0.2rem solid var(--color-darkgreen);
+}
+
+.addBirthday:hover{
+   cursor: pointer;
+}
+
+
+#AddBirthday:hover,
+#AddCategory:hover{
+    cursor: pointer;
+}
+
+/*
+    Category sidebar
+*/
+#category{
+    overflow: hidden;
+    height: 17rem;
+    margin-top: 1rem;
+    width: 100%;
+    border: 0.2rem double var(--color-darkgreen);
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+#show-category label{
+    display: flex;
+    margin: 0.4rem;
+    height: 1.5rem;
+    font-size: 1.5rem;
+}
+#show-category label:hover{
+    cursor: pointer;
+}
+#importantpeople{
+    width: 15rem;
+}
+
+.newSidebarBirthday{
+    overflow:auto;
+    border: 0.2rem solid var(--color-darkgreen);
+    margin-top:0.2rem;
+    padding-left: 0.5rem;
+    display: block;
+    font-size: 1.2rem;
+}
+
+.newSidebarBirthday:hover{
+    cursor: pointer;
+}
+
+
+.friendsCheckbox{
+    height: 2.5rem;
+    align-content: center;
+    border: 0.2rem solid var(--color-darkgreen);
+    background-color:var(--color-friends);
+}
+
+.familyCheckbox{
+    align-content: center;
+    height: 2.5rem;
+    border: 0.2rem solid var(--color-darkgreen);
+    background-color: var(--color-family);
+}
+
