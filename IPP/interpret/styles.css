@@ -1,0 +1,159 @@
+/* @author: Veronika Vengerova*/
+/* login: xvenge01*/
+/* date: 19.4.2022*/
+
+body{
+    margin: auto;
+    width: 50%;
+    background-color: lightgray;
+}
+
+.outer {
+    width: 56rem;
+    height: 100%;
+    background-color: gray;
+}
+
+.header {
+    width: 55.6rem;
+    height: 9.6rem;
+    border: solid 0.2rem dimgray;
+}
+
+.percento{
+    font-weight: bold;
+    margin: auto;
+    float: left;
+    width: 23.8rem;
+    text-align: center;
+    height: 8.8rem;
+    border: solid 0.2rem dimgray;
+    background-color: whitesmoke;
+    padding: 0.2rem;
+}
+
+.right {
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 30.6rem;
+    background-color: whitesmoke;
+    float: right;
+    height: 9.2rem;
+    border: solid 0.2rem dimgray;
+    text-align: center;
+}
+.correct{
+    color: darkgreen;
+}
+
+.incorrect{
+    color: darkred;
+}
+
+#border{
+    background-color: darkred;
+    border: solid 0.15rem black;
+}
+.green{
+    background-color: darkgreen;
+}
+
+
+.lightred{
+    background-color: indianred;
+}
+
+.lightgreen{
+    background-color: lightgreen;
+}
+
+#percent {
+    font-size: 1.3rem;
+}
+
+#percentTab {
+    border: solid 0.2rem blueviolet;
+    vertical-align: top;
+    background-color: aqua;
+}
+
+#tester{
+    overflow-y: auto;
+    height: 38rem;
+    border-left: solid 0.2rem dimgray;
+    border-right: solid 0.2rem dimgray;
+    padding: 1rem;
+}
+
+.testResult {
+    display: grid;
+    grid-template-columns: 6rem 40rem 6rem;
+    grid-template-rows: 2rem 5rem;
+    grid-template-areas:
+        "number name result"
+        "number output result"
+        ;
+    background-color: whitesmoke;
+    margin-top: 0.2rem;
+    border: solid 0.1rem dimgray;
+    padding: 1rem;
+}
+.testNumber{
+    grid-area: number;
+}
+.testName{
+    height: 2rem;
+    overflow-x: auto;
+    font-weight: bolder;
+    font-size: 0.8rem;
+    grid-area: name;
+    justify-self: center;
+    align-self: center;
+    padding: 0.25rem;
+}
+.incorrectborder{
+    border-radius: 0.5rem;
+    border: solid 0.2rem darkred;
+}
+.correctborder{
+
+    border-radius: 0.5rem;
+    border: solid 0.2rem darkgreen;
+}
+
+.incorrectcolor{
+
+    background-color: darkred;
+    color: whitesmoke;
+}
+.correctcolor{
+    color: whitesmoke;
+    background-color: darkgreen;
+    text-align: center;
+}
+
+.result{
+    height: 4rem;
+    grid-area: output;
+    width: 100%;
+    padding: 0.2rem;
+    justify-self: center;
+    align-self: center;
+    overflow-y: scroll;
+}
+
+.testOKNO{
+    grid-area: result;
+    font-size: 2rem;
+    justify-self: center;
+    align-self: center;
+    font-weight: bold;
+}
+
+.testNumber {
+    justify-self: center;
+    align-self: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+}
